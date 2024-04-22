@@ -19,6 +19,8 @@ section{
     background-color: hsl(0, 0%, 100%);
     padding: 20px;
     border-radius: 15px 15px 150px 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .inputs-container{
@@ -140,3 +142,25 @@ footer a{
     color: hsl(0, 0%, 59%);
 }
 
+
+/* Media Queries */
+
+@media (max-width: 475px){
+    section{
+        width: 80%;
+    }
+    .inputs-container{
+        width: 100%;
+        margin-left: 0;
+    }
+    .input-container input{
+        font-size: 20px;
+    }
+
+    .date-container p{
+        font-size: 50px;
+        font-weight: 800;
+        display: inline;
+        margin-left: 20px;
+    }
+}
