@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background-color: hsl(0, 0%, 86%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family:'Poppins', sans-serif;
+}
+
+section{
+    width: 600px;
+    background-color: hsl(0, 0%, 100%);
+    padding: 20px;
+    border-radius: 15px 15px 150px 15px;
+}
+
+.inputs-container{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+
+}
+
+.input-container{
+    display: flex;  
+    flex-direction: column;
+    width: 33.3%;
+    margin: 0 5px;
+}
+
+.input-container label{
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.input-container input{
+    padding: 10px;
+    font-size: 32px;   
+    border-radius: 5px;
+    border: 1px solid hsl(0, 0%, 86%);
+    padding: 15px;    
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.input-container input::placeholder{
+    font-family:'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.input-container p{
+    font-style: italic;
+    color: hsl(0, 100%, 67%);
+    font-size: 12px;
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    transition: all .5s ease-out;
+
+}
+
+.show-error{
+    opacity: 1 !important;
+    height: 20px !important;
+    margin-top: 10px !important;
+}
+
+.input-error{
+    border: 1.5px solid hsl(0, 100%, 67%) !important;
+    transition: all .5s ease-out;
+}
+
+.label-error{
+    color: hsl(0, 100%, 67%);
+    transition: all .5s ease-out;
+}
+
+.button-container{
+    display: flex;
+    justify-content: start;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.button-container .separator{
+    width: 85%;
+    height: 1px;
+    border-top: 1px solid hsl(0, 0%, 86%);
+}
+
+button{
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+}
+
+button img{
+    background-color:  hsl(259, 100%, 65%);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.date-container{
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.date-container p{
+    font-size: 80px;
+    font-weight: 800;
+    display: inline;
+    margin-left: 20px;
+}
+
+.date-container .violet{
+    color: hsl(259, 100%, 65%);
+}
+
+footer{
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+footer a{
+    color: hsl(0, 0%, 59%);
+}
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+
+    <title>Frontend Mentor | Age calculator app</title>
+
+</head>
+
+<body>
+    <section>
+        <div class="inputs-container">
+            <div class="input-container">
+                <label for="date" id="label-day">Day</label>
+                <input type="number" id="day-input" placeholder="DD" maxlength="2" minlength="1" min="1" max="31">
+                <p id="dayErrorEmpty">This field is required</p>
+                <p id="dayError">Must be a valid day</p>
+            </div>
+            <div class="input-container">
+                <label for="date" id="label-month">Month</label>
+                <input type="number" id="month-input" placeholder="MM" maxlength="2" minlength="1" min="1" max="12">
+                <p id="monthErrorEmpty">This field is required</p>
+                <p id="monthError">Must be a valid month</p>
+            </div>
+            <div class="input-container">
+                <label for="date" id="label-year">Year</label>
+                <input type="number" id="year-input" placeholder="YYYY" maxlength="4" minlength="4" min="1900">
+                <p id="yearErrorEmpty">This field is required</p>
+                <p id="yearError">Must be in the past (or not so much)</p>
+            </div>
+        </div>
+        <div class="button-container">
+            <div class="separator"></div>
+            <button class="img-container" type="submit" onclick="onClick()">
+                <img src="./assets/images/icon-arrow.svg">
+            </button>
+        </div>
+        <div class="date-container">
+            <div class="year">
+                <p id="year" class="violet">--</p>
+                <p>years</p>
+
+            </div>
+            <div class="month">
+                <p id="month" class="violet">--</p>
+                <p>months</p>
+            </div>
+            <div class="day">
+                <p id="day" class="violet">--</p>
+                <p>days</p>
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/goncho09">goncho09</a>.
+    </footer>
+</body>
+
+</html>
