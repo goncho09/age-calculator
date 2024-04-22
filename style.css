@@ -145,7 +145,7 @@ footer a{
 
 /* Media Queries */
 
-@media (max-width: 475px){
+@media (max-width: 750px){
     section{
         width: 80%;
     }
