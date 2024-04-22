@@ -157,6 +157,9 @@ footer a{
         font-size: 20px;
     }
 
+    .date-container{
+        margin-left:0;
+    }
     .date-container p{
         font-size: 50px;
         font-weight: 800;
