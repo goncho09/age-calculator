@@ -51,6 +51,8 @@ const onClick = () => {
         } else {
           monthAge = 11 + monthAge;
         }
+      } else if (dayAge < 0) {
+        dayAge += 31;
       }
 
       day.innerHTML = dayAge;
@@ -106,7 +108,7 @@ const isCorrectYear = (year) => {
 };
 
 const isCorrectMonth = (month) => {
-  if (month < 1 || month > 12 || month > currentMonth)  {
+  if (month < 1 || month > 12) {
     errorMonth.classList.add('show-error');
     monthInput.classList.add('input-error');
     monthLabel.classList.add('label-error');
@@ -120,7 +122,7 @@ const isCorrectMonth = (month) => {
 };
 
 const isCorrectDay = (day) => {
-  if (day < 1 || day > 31 || day > currentDate) {
+  if (day < 1 || day > 31) {
     errorDay.classList.add('show-error');
     dayInput.classList.add('input-error');
     dayLabel.classList.add('label-error');
@@ -136,6 +138,7 @@ const isCorrectDay = (day) => {
 const isCorrectDate = (day, month, year) => {
   if (
     (day > currentDay && month > currentMonth && year > currentYear) ||
+    (day > currentDay && (month > currentMonth || month == currentMonth)) ||
     (day > 28 && month == 2)
   ) {
     errorDay.classList.add('show-error');
@@ -146,6 +149,7 @@ const isCorrectDate = (day, month, year) => {
     monthLabel.classList.add('label-error');
     return false;
   } else {
+    console.log(day, currentDay, month, currentMonth);
     errorDay.classList.remove('show-error');
     dayInput.classList.remove('input-error');
     dayLabel.classList.remove('label-error');
