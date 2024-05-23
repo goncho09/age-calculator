@@ -106,7 +106,7 @@ const isCorrectYear = (year) => {
 };
 
 const isCorrectMonth = (month) => {
-  if (month < 1 || month > 12) {
+  if (month < 1 || month > 12 || month > currentMonth)  {
     errorMonth.classList.add('show-error');
     monthInput.classList.add('input-error');
     monthLabel.classList.add('label-error');
@@ -120,7 +120,7 @@ const isCorrectMonth = (month) => {
 };
 
 const isCorrectDay = (day) => {
-  if (day < 1 || day > 31) {
+  if (day < 1 || day > 31 || day > currentDate) {
     errorDay.classList.add('show-error');
     dayInput.classList.add('input-error');
     dayLabel.classList.add('label-error');
